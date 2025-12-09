@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cool website</title>
+</head>
+<h3>This is a very cool website</h3>
+<button onclick="loadVideo()">Completely Innocent Button!</button>
+<div id="contentArea">
+    <p></p>
+</div>
+<script>
+function loadVideo() {
+    document.getElementById("contentArea").innerHTML = `
+        <video class="video" width="400" loop autoplay>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div >
+            <img src="images/image1.jpg" alt="Image 1" width="300">
+            <img src="images/image2.jpg" alt="Image 2" width="300">
+            <img src="images/image3.jpg" alt="Image 3" width="300">
+        </div>
+        <button onclick="refreshPage()">Refresh Page</button>
+    `;
+}
+ function refreshPage() {
+            window.location.reload(); // Reloads the current page
+            // Or, to force a reload from the server (not cache):
+            // window.location.reload(true); 
+        }
+</script>
+<style>
+.video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</html>
