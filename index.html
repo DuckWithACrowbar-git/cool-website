@@ -11,22 +11,25 @@
 <script>
 function loadVideo() {
     document.getElementById("contentArea").innerHTML = `
-        <video class="video" width="400" loop autoplay>
-            <source src="video.mp4" type="video/mp4">
+        <video class="video" data-second=9 width="400" loop autoplay>
+            <source src="images/video.mp4" type="video/mp4">
         </video>
-        <div >
-            <img src="images/image1.jpg" alt="Image 1" width="300">
-            <img src="images/image2.jpg" alt="Image 2" width="300">
-            <img src="images/image3.jpg" alt="Image 3" width="300">
+        <img
+        <div>
+            <img src="images/image1.jpg" alt="Image 1" width="310">
+            <img src="images/image2.jpg" alt="Image 2" width="310">
+            <img src="images/image3.jpg" alt="Image 3" width="310">
+            <img src="images/image4.jpg" alt="Image 4" width="310">
+            <img src="images/image5.jpg" alt="Image 5" width="310">
+            <img src="images/image6.jpg" alt="Image 6" width="310">
         </div>
         <button onclick="refreshPage()">Refresh Page</button>
     `;
 }
  function refreshPage() {
-            window.location.reload(); // Reloads the current page
-            // Or, to force a reload from the server (not cache):
-            // window.location.reload(true); 
+            window.location.reload(); 
         }
+    
 </script>
 <style>
 .video {
@@ -34,5 +37,6 @@ function loadVideo() {
   margin-left: auto;
   margin-right: auto;
 }
+
 </style>
 </html>
