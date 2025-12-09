@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cool website</title>
+</head>
+<h3>Hello World</h3>
+<button onclick="loadVideo()">Open Video</button>
+
+<div id="contentArea">
+    <p>This is the original content.</p>
+</div>
+<script>
+function loadVideo() {
+    document.getElementById("contentArea").innerHTML = `
+        <video width="600" controls autoplay>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+    `;
+}
+</script>
+
+</div>
+</html>
