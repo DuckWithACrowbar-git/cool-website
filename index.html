@@ -3,32 +3,35 @@
 <head>
     <title>Cool website</title>
 </head>
+<body style="background-color: rgba(255, 255, 0, 0.902);">
 <h3>This is a very cool website</h3>
 <button onclick="loadVideo()">Completely Innocent Button!</button>
 <div id="contentArea">
     <p></p>
 </div>
+</body>
 <script>
 function loadVideo() {
     document.getElementById("contentArea").innerHTML = `
-        <video class="video" data-second=9 width="400" loop autoplay>
+        <video class="video" width="400" loop autoplay>
             <source src="images/video.mp4" type="video/mp4">
         </video>
-        <img
-        <div>
-            <img src="images/image1.jpeg" alt="Image 1" width="310">
-            <img src="images/image2.jpg" alt="Image 2" width="310">
-            <img src="images/image3.jpg" alt="Image 3" width="310">
-            <img src="images/image4.jpg" alt="Image 4" width="310">
-            <img src="images/image5.jpg" alt="Image 5" width="310">
-            <img src="images/image6.jpg" alt="Image 6" width="310">
+        <div id="1" class="duck">
+            <img height="200" src="images/image1.jpeg" alt="Image1">
+            <img height="200" src="images/image2.jpg" alt="Image2">
+            <img height="200" src="images/image3.jpg" alt="Image3">
+        </div>
+        <div id="2" class="duck">
+            <img height="200" src="images/image4.jpg" alt="Image4">
+            <img height="200" src="images/image5.jpeg" alt="Image5">
+            <img height="200" src="images/image6.jpg" alt="Image6">
         </div>
         <div><button onclick="refreshPage()">Refresh Page</button></div>
     `;
 }
- function refreshPage() {
-            window.location.reload(); 
-        }
+function refreshPage() {
+    window.location.reload();
+}
     
 </script>
 <style>
@@ -38,5 +41,10 @@ function loadVideo() {
   margin-right: auto;
 }
 
+.duck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 </style>
 </html>
