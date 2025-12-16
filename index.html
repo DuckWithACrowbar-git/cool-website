@@ -1,37 +1,6 @@
  <!DOCTYPE html>
 <html lang="en">
-<head><title>Cool website</title></head>
-<body style="background-color: rgba(255, 255, 0, 0.902);">
-<h2>This is a very cool website</h2>
-<button onclick="loadVideo()">Completely Innocent Button!</button>
-<div id="contentArea"><p></p></div>
-</body>
-<script>
-function loadVideo() {
-    document.getElementById("contentArea").innerHTML = `
-        <video class="video" width="400" loop autoplay>
-            <source src="">
-        </video>
-        <div>
-        </div>
-        
-        <div><button onclick="refreshPage()">Refresh Page</button></div>
-    `;
-}
-function refreshPage() {
-    window.location.reload();
-}
-</script>
-<style>
-.video {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.duck {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-</style>
+<head><title>Cool website</title><link rel="stylesheet" href="styles.css"></head>
+<body class="background"></body>
+<script src="script.js"></script>
 </html>
