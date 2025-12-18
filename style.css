@@ -26,7 +26,7 @@ p{
   position: relative;
   animation-name: move_p1;
   animation-duration: 2s;
-  animation-delay: 3s;
+  animation-delay: 1s;
   animation-iteration-count: 999999999999999999999999999999999999999;
 }
 
@@ -38,7 +38,7 @@ p{
   padding: 20px;
   position: relative;
   animation-name: move_title-h1;
-  animation-duration: 2s;
+  animation-duration: 1.25s;
   animation-iteration-count: 1;
 }
 
@@ -48,17 +48,16 @@ p{
 
 
 @keyframes move_title-h1 {
-  0% {left: 20px; transform: scale(20%) rotate(10deg);}
-  100% {left: 0px; transform: rotate(0deg);}
-
+  0% {top: -100px;}
+  100% {top: 0px;}
 }
 
 @keyframes move_p1 {
-  0% {transform:scaleX(10) scaleY(1)}
-  50% {transform:scaleX(1) scaleY(10)}
-  100% {transform:scaleX(10) scaleY(1)}
+  0% {transform:scaleX(15) scaleY(1)}
+  50% {transform:scaleX(1) scaleY(15)}
+  100% {transform:scaleX(15) scaleY(1)}
 }
 
 @keyframes move_p2 {
-
+  
 }
