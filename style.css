@@ -15,10 +15,6 @@ nav{
   font-family: var(--font);
   border-radius: 30px;
   padding: 35px;
-  position: relative;
-  animation-name: move_a;
-  animation-duration: 4s;
-  animation-iteration-count: 3;
 }
 
 p{
@@ -27,6 +23,11 @@ p{
   align-content: center;
   align-self: center;
   text-align: center;
+  position: relative;
+  animation-name: move_p1;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-iteration-count: 999999999999999999999999999999999999999;
 }
 
 .title-h1{
@@ -35,6 +36,10 @@ p{
   background-color: var(--background-color);
   border-radius: 20px;
   padding: 20px;
+  position: relative;
+  animation-name: move_title-h1;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
 }
 
 .hidden{
@@ -42,8 +47,18 @@ p{
 }
 
 
-@keyframes move_a {
-  0% {left: 0px}
-  50% {left: 100px;}
-  100% {left: 0px;}
+@keyframes move_title-h1 {
+  0% {left: 20px; transform: scale(20%) rotate(10deg);}
+  100% {left: 0px; transform: rotate(0deg);}
+
+}
+
+@keyframes move_p1 {
+  0% {transform:scaleX(10) scaleY(1)}
+  50% {transform:scaleX(1) scaleY(10)}
+  100% {transform:scaleX(10) scaleY(1)}
+}
+
+@keyframes move_p2 {
+
 }
