@@ -1,11 +1,12 @@
 :root{
-  --background-color:rgb(47, 47, 47);
+  --background-color: rgba(218, 221, 221, 0.832);
+  --background-color2: rgb(235, 239, 240);
   --font:Ubuntu;
 }
 
 
-body{
-  background-color: rgb(63, 62, 62);
+html{
+  background-color: var(--background-color2);
   font-family: var(--font);
 }
 
@@ -14,10 +15,18 @@ nav{
   font-family: var(--font);
   border-radius: 30px;
   padding: 35px;
+  position: relative;
+  animation-name: move_a;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
 }
 
 p{
   font-family: var(--font);
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
 }
 
 .title-h1{
@@ -30,4 +39,11 @@ p{
 
 .hidden{
   visibility: hidden;
+}
+
+
+@keyframes move_a {
+  0% {left: 0px}
+  50% {left: 100px;}
+  100% {left: 0px;}
 }
