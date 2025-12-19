@@ -100,3 +100,6 @@ nav{
   75% {left: -400px; scale: var(--scale);}
   100% {left: 0px; scale: var(--scale);}
 }
+
+@keyframes move_p4 {
+}
