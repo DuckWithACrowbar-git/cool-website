@@ -2,6 +2,7 @@
   --background-color: rgba(218, 221, 221, 0.832);
   --background-color2: rgb(235, 239, 240);
   --font:Ubuntu;
+  --scale:4;
 }
 
 
@@ -17,7 +18,7 @@ nav{
   padding: 35px;
 }
 
-p{
+.p1{
   font-family: var(--font);
   justify-content: center;
   align-content: center;
@@ -25,6 +26,32 @@ p{
   text-align: center;
   position: relative;
   animation-name: move_p1;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 999999999999999999999999999999999999999;
+}
+
+.p2{
+  font-family: var(--font);
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  position: relative;
+  animation-name: move_p2;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 999999999999999999999999999999999999999;
+}
+
+.p3{
+  font-family: var(--font);
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  position: relative;
+  animation-name: move_p3;
   animation-duration: 2s;
   animation-delay: 1s;
   animation-iteration-count: 999999999999999999999999999999999999999;
@@ -59,5 +86,17 @@ p{
 }
 
 @keyframes move_p2 {
-  
+  0% {transform: rotate(0deg); scale: var(--scale);}
+  25% {transform: rotate(90deg); scale: var(--scale);}
+  50% {transform: rotate(180deg); scale: var(--scale);}
+  75% {transform: rotate(270deg); scale: var(--scale);}
+  100% {transform: rotate(360deg); scale: var(--scale);}
+}
+
+@keyframes move_p3 {
+  0% {left: 0px; scale: var(--scale);}
+  25% {left: 400px; scale: var(--scale);}
+  50% {left: 0px; scale: var(--scale);}
+  75% {left: -400px; scale: var(--scale);}
+  100% {left: 0px; scale: var(--scale);}
 }
