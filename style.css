@@ -1,12 +1,14 @@
 :root{
-  --background-color: rgba(218, 221, 221, 0.832);
-  --background-color2: rgb(235, 239, 240);
-  --font:Ubuntu;
+  --color1: rgba(218, 221, 221, 0.832);
+  --color2: rgb(235, 239, 240);
+  --white: rgb(255, 255, 255);
+  --font: Ubuntu;
   --scale:4;
 }
 
+
 html{
-  background-color: var(--background-color2);
+  background-color: var(--color1);
   font-family: var(--font);
   width: fit-content;
   height: auto;
@@ -16,20 +18,49 @@ html{
 
 }
 
+
+.hidden{
+  visibility: hidden;
+}
+
+
 .title{
   margin: 10px;
   opacity: 0;
   padding: 10px;
-  border: 10px solid #929292;
-  border-radius: 20px;
-  animation-name: title_fade_in;
+  border: 5px solid #929292;
+  border-radius: 15px;
+  animation-name: fade_in;
   animation-fill-mode: forwards;
   animation-delay: 1s;
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
 
-@keyframes title_fade_in {
-  0%{opacity: 0;}
-  100%{opacity: 1;}
+
+.penguin-image{
+  width: 70px;
+  height: auto;
+  padding-left: 25px;
+  opacity: 0;
+  animation-name: fade_in;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 4s;
 }
+
+
+.intro{
+  margin: 10px;
+  padding: 10px;
+}
+
+
+
+
+
+/* Please put all the "@keyframes" in the bottom for cleanliness*/
+  @keyframes fade_in {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
