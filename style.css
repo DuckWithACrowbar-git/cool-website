@@ -8,8 +8,8 @@
 
 
 html{
-  background-color: var(--color1);
-  font-family: var(--font);
+  background-color: rgba(218, 221, 221, 0.832);;
+  font-family: Ubuntu;
   width: fit-content;
   height: auto;
   align-self: center;
