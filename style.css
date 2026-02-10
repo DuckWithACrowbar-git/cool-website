@@ -5,43 +5,31 @@
   --scale:4;
 }
 
-
 html{
   background-color: var(--background-color2);
   font-family: var(--font);
+  width: fit-content;
+  height: auto;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
-nav{
-  background-color: var(--background-color);
-  font-family: var(--font);
-  border-radius: 30px;
-  padding: 35px;
-}
-
-
-.title-h1{
-  color: rgb(0, 0, 0);
-  font-family: var(--font);
-  background-color: var(--background-color);
+.title{
+  margin: 10px;
+  opacity: 0;
+  padding: 10px;
+  border: 10px solid #929292;
   border-radius: 20px;
-  padding: 20px;
-  position: relative;
-  animation-name: move_title-h1;
-  animation-duration: 1.25s;
+  animation-name: title_fade_in;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
 }
 
-.hidden{
-  visibility: hidden;
-}
-
-
-@keyframes move_title-h1 {
-  0% {top: -100px;}
-  100% {top: 0px;}
-}
-
-.test{
-  font-family: var(--font);
-  color: rgb(0, 0, 0);
+@keyframes title_fade_in {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
