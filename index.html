@@ -4,14 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cool website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 </head>
 <body>
-    <div>
-        <h2 class="title">Linux</h2>
+    <h2 class="title">Linux</h2>
+    <h4 class="hidden">fillerfillerfiller</h4>
+    <h3 class="intro">Linux is an operating system that can be used in many ways!</h3>
+    <h3 class="intro second-intro">Learn more:</h3>
+    <h1 class="hidden">fillerfillerfiller</h1>
+    <h1 class="hidden">fillerfillerfiller</h1>
+    <div class="distros-container">
+      <a target="_blank" href="https://www.archlinux.org"><button class="distros-button">Arch Linux</button></a>
     </div>
-    <img class="penguin-image" src="assets/penguin.png" width="70px" height="auto">
-    <h4 class="intro">Linux is an operating system that can be used in many ways!</h4>
 </body>
+<style>
+    :root{
+  --color1: rgba(218, 221, 221, 0.832);
+  --color2: rgb(235, 239, 240);
+  --white: rgb(255, 255, 255);
+  --font: Ubuntu;
+  --scale:4;
+}
+
+
+html{
+  background-color: rgba(218, 221, 221, 0.832);;
+  font-family: Ubuntu;
+  width: fit-content;
+  height: auto;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.hidden{
+  visibility: hidden;
+}
+
+
+.title{
+  margin: auto;
+  opacity: 0;
+  padding: 10px;
+  width: fit-content;
+  border: 5px solid #929292;
+  border-radius: 15px;
+  animation-name: fade_in;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+
+.penguin-image{
+  width: 70px;
+  height: auto;
+  padding-left: 25px;
+  opacity: 0;
+  animation-name: fade_in;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 4s;
+}
+
+
+.intro{
+  padding: 5px;
+  margin: auto;
+  align-self: center;
+  align-content: center;
+  justify-self: center;
+}
+
+
+.second-intro{
+  padding-right: 200px;
+}
+
+
+.distros-container{
+  opacity: 1;
+}
+
+
+.distros-button{
+  opacity: 1;
+}
+
+button{
+  /* Please finish from here */
+    /* Please finish from here */
+      /* Please finish from here */
+        /* Please finish from here */
+          /* Please finish from here */
+            /* Please finish from here */
+              /* Please finish from here */
+                /* Please finish from here */
+                  /* Please finish from here */
+                    /* Please finish from here */
+  opacity: 1;
+}
+
+
+/* Please put all the "@keyframes" in the bottom for cleanliness*/
+  @keyframes fade_in {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
+</style>
 </html>
