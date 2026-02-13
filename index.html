@@ -85,7 +85,7 @@ html{
 
 
 .second-intro{
-  padding-right: 200px;
+  padding-right: 430px;
 }
 
 
@@ -104,18 +104,47 @@ html{
 
 
 button{
-  background-color: red;
-  border: 5px solid blue;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
   border-radius: 10px;
   opacity: 1;
   margin: auto;
 }
 
 
+
+button:hover{
+  animation-name: button_anim ;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+
+button:not:hover{
+  animation-name: button_anim_reverse ;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
 /* Please put all the "@keyframes" in the bottom for cleanliness*/
-  @keyframes fade_in {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-  }
+@keyframes fade_in {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+
+@keyframes button_anim{
+  0%{transform: scale(1); border: 2px solid black;}
+  100%{transform: scale(1.1); border: 5px solid blue;}
+}
+
+@keyframes button_anim_reverse{
+  0%{transform: scale(1.1); border: 5px solid blue;}
+  100%{transform: scale(1); border: 2px solid black;}
+}
+
 </style>
 </html>
