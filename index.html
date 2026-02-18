@@ -19,6 +19,18 @@
       <a target="_blank" href="https://www.archlinux.org"><button class="distros-button">Arch Linux</button></a>
       <a target="_blank" href="https://ubuntu.com"><button class="distros-button">Ubuntu Linux</button></a>
       <a target="_blank" href="https://www.debian.org"><button class="distros-button">Debian Linux</button></a>
+      <!-- <a target="_blank" href="https://www.gentoo.org"><button class="distros-button">Gentoo Linux</button></a> -->
+      <a target="_blank" href="http://www.tinycorelinux.net"><button class="distros-button">Tiny Core Linux</button></a>
+    </div>
+    <h1 class="hidden">fillerfillerfiller</h1>
+    <div class="description">
+      <p>Linux is an open-source operating system made by Linus Torvalds as an</p>
+      <p>alternative to paid OSes (like MS-DOS and MacOS). He wanted something</p>
+      <p>people could trust, and made the Linux kernel. Other people made their</p>
+      <p>own versions of Linux called "Linux distributions" or "Linux distros".</p>
+      <p>The most popular Linux distros for beginners are Ubuntu and Linux Mint</p>
+      <p>because they have a lot of utilities and tools installed alongside the</p>
+      <p>operating system.</p>
     </div>
 </body>
 <style>
@@ -100,34 +112,34 @@ html{
 
 .distros-button{
   opacity: 1;
-}
-
-
-button{
   padding: 5px;
   background-color: rgb(255, 255, 255);
   border: 2px solid black;
   border-radius: 10px;
-  opacity: 1;
   margin: auto;
 }
 
 
-
-button:hover{
+.distros-button:hover{
   animation-name: button_anim ;
   animation-fill-mode: forwards;
-  animation-duration: 0.5s;
+  animation-duration: 0.25s;
   animation-iteration-count: 1;
 }
 
 
-button:not:hover{
+.distros-button:not(:hover){
   animation-name: button_anim_reverse ;
   animation-fill-mode: forwards;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
+  animation-duration: 0.25s;
+  animation-iteration-count: 1; 
 }
+
+
+.description{
+  opacity: 1;
+}
+
 
 /* Please put all the "@keyframes" in the bottom for cleanliness*/
 @keyframes fade_in {
@@ -138,11 +150,11 @@ button:not:hover{
 
 @keyframes button_anim{
   0%{transform: scale(1); border: 2px solid black;}
-  100%{transform: scale(1.1); border: 5px solid blue;}
+  100%{transform: scale(1.1); border: 5px solid black;}
 }
 
 @keyframes button_anim_reverse{
-  0%{transform: scale(1.1); border: 5px solid blue;}
+  0%{transform: scale(1.1); border: 5px solid black;}
   100%{transform: scale(1); border: 2px solid black;}
 }
 
