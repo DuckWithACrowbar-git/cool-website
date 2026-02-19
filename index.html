@@ -10,14 +10,15 @@
 <body>
     <h2 class="title">Linux</h2>
     <h4 class="hidden">fillerfillerfiller</h4>
-    <h3 class="intro">Linux is an operating system that can be used in many ways!</h3>
-    <h3 class="intro second-intro">Learn more:</h3>
+    <h3 class="intro">The Linux operating system!</h3>
+    <h4 class="hidden">fillerfillerfiller</h4>
+    <img src="assets/penguin.png" class="penguin-image" alt="Linux penguin">
     <h1 class="hidden">fillerfillerfiller</h1>
     <div class="description">
       <p>Linux is an open-source operating system made by <span><a target="_blank" href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a></span> as an alternative to paid OSes (like MS-DOS and MacOS).</p>
       <p>He wanted something people could trust, and made the Linux kernel as a result. Other people made their own versions</p>
       <p> of Linux called "Linux distributions" or "Linux distros". The most popular Linux distros for beginners are Ubuntu and</p>
-      <p>Linux Mint because they have a lot of utilities and tools installed with the operating system.</p>
+      <p>Linux Mint because they have a lot of utilities and tools installed with the operating system. <span><a href="https://en.wikipedia.org/wiki/Linux">(Wikipedia page)</a></span></p>
     </div>
     <h1 class="hidden">fillerfillerfiller</h1>
     <h1 class="hidden">fillerfillerfiller</h1>
@@ -37,7 +38,7 @@
     </div>
 </body>
 <style>
-    :root{
+:root{
   --color1: rgba(218, 221, 221, 0.832);
   --color2: rgb(235, 239, 240);
   --white: rgb(255, 255, 255);
@@ -81,8 +82,11 @@ html{
 .penguin-image{
   width: 70px;
   height: auto;
-  padding-left: 25px;
   opacity: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
   animation-name: fade_in;
   animation-fill-mode: forwards;
   animation-duration: 2s;
