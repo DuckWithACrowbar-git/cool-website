@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All About Linux</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 </head>
 <body>
-    <h2 class="title">Linux</h2>
+    <h2 class="fade-in title">Linux</h2>
     <h4 class="hidden">fillerfillerfiller</h4>
-    <h3 class="intro">The Linux operating system!</h3>
+    <h3 class="fade-in intro">The Linux operating system!</h3>
     <h4 class="hidden">fillerfillerfiller</h4>
-    <img src="assets/penguin.png" class="penguin-image" alt="Linux penguin">
+    <img src="assets/penguin.png" class="fade-in penguin-image" alt="Linux penguin">
     <h1 class="hidden">fillerfillerfiller</h1>
-    <div class="description">
+    <div class="fade-in description">
       <p>Linux is an open-source operating system made by <span><a target="_blank" href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a></span> as an alternative to paid OSes (like MS-DOS and MacOS).</p>
       <p>He wanted something people could trust, and made the Linux kernel as a result. Other people made their own versions</p>
       <p> of Linux called "Linux distributions" or "Linux distros". The most popular Linux distros for beginners are Ubuntu and</p>
@@ -22,14 +25,14 @@
     </div>
     <h1 class="hidden">fillerfillerfiller</h1>
     <h1 class="hidden">fillerfillerfiller</h1>
-    <div class="distros-container">
+    <div class="fade-in distros-container">
         <h4 class="description">Beginner-friendly Linux Distros</h4>
         <a target="_blank" href="https://www.linuxmint.com"><button class="distros-button">Linux Mint</button></a>
         <a target="_blank" href="https://ubuntu.com"><button class="distros-button">Ubuntu Linux</button></a>
         <a target="_blank" href="https://zorin.com/os/"><button class="distros-button">Zorin OS</button></a>
     </div>
     <h1 class="hidden">fillerfillerfiller</h1>
-    <div class="distros-container">
+    <div class="fade-in distros-container">
         <h4 class="description">Advanced Linux Distros</h4>
         <a target="_blank" href="https://www.archlinux.org"><button class="distros-button">Arch Linux</button></a>
         <a target="_blank" href="https://www.gentoo.org"><button class="distros-button">Gentoo Linux</button></a>
@@ -64,6 +67,15 @@ html{
 }
 
 
+.fade-in{
+  opacity: 0;
+  animation-name: fade_in;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+
 .title{
   margin: auto;
   opacity: 0;
@@ -71,11 +83,18 @@ html{
   width: fit-content;
   border: 5px solid #929292;
   border-radius: 15px;
-  animation-name: fade_in;
-  animation-fill-mode: forwards;
   animation-delay: 1s;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
+}
+
+
+.intro{
+  opacity: 0;
+  animation-delay: 3s;
+  padding: 5px;
+  margin: auto;
+  align-self: center;
+  align-content: center;
+  justify-self: center;
 }
 
 
@@ -87,19 +106,7 @@ html{
   margin-left: auto;
   margin-right: auto;
   align-self: center;
-  animation-name: fade_in;
-  animation-fill-mode: forwards;
-  animation-duration: 2s;
   animation-delay: 4s;
-}
-
-
-.intro{
-  padding: 5px;
-  margin: auto;
-  align-self: center;
-  align-content: center;
-  justify-self: center;
 }
 
 
@@ -109,16 +116,15 @@ html{
 
 
 .distros-container{
-  opacity: 1;
   justify-self: center;
   justify-content: center;
   align-self: center;
   align-content: center;
+  animation-delay: 6s;
 }
 
 
 .distros-button{
-  opacity: 1;
   padding: 5px;
   background-color: rgb(255, 255, 255);
   border: 2px solid black;
@@ -150,6 +156,7 @@ html{
     align-items: center;
     align-content: center;
     align-self: center;
+    animation-delay: 5s
 }
 
 
@@ -171,4 +178,5 @@ html{
 }
 
 </style>
+<script>document.documentElement.scrollTop = 0;</script>
 </html>
