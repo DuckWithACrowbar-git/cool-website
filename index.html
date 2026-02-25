@@ -60,7 +60,10 @@ html{
   align-self: center;
   margin-left: auto;
   margin-right: auto;
-
+  animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.25s;
 }
 
 
@@ -151,6 +154,12 @@ html{
 }
 
 
+.distros-button:active{
+  animation-name: button_click_anim;
+  animation-duration: 0.25s;
+}
+
+
 .description{
     width: fit-content;
     margin-left: auto;
@@ -170,14 +179,21 @@ html{
 
 
 @keyframes button_anim{
-  0%{transform: scale(1); border: 2px solid black;}
-  100%{transform: scale(1.1); border: 5px solid black;}
+  0%{transform: scale(1) rotate(0deg); border: 2px solid black;}
+  100%{transform: scale(1.1) rotate(-5deg); border: 5px solid black;}
 }
 
 @keyframes button_anim_reverse{
-  0%{transform: scale(1.1); border: 5px solid black;}
-  100%{transform: scale(1); border: 2px solid black;}
+  0%{transform: scale(1.1) rotate(-5deg); border: 5px solid black;}
+  100%{transform: scale(1) rotate(0deg); border: 2px solid black;}
 }
+
+@keyframes button_click_anim {
+  0%{transform: scale(1.1) rotate(-5deg);}
+  25%{transform: scale(0.9);}
+  50%{transform: scale(1.1) rotate(0deg);}
+}
+
 
 </style>
 <script>document.documentElement.scrollTop = 0;</script>
