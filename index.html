@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All About Linux</title>
+    <title>The Linux Operating System</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
@@ -13,7 +13,7 @@
 <body>
     <h2 class="fade-in title">Linux</h2>
     <h4 class="hidden">fillerfillerfiller</h4>
-    <h3 class="fade-in intro">The Linux operating system!</h3>
+    <h2 class="fade-in intro">The Linux operating system!</h2>
     <h4 class="hidden">fillerfillerfiller</h4>
     <img src="assets/penguin.png" class="fade-in penguin-image" alt="Linux penguin">
     <h1 class="hidden">fillerfillerfiller</h1>
@@ -41,6 +41,12 @@
     </div>
     <h1 class="hidden">fillerfillerfiller</h1>
     <h1 class="hidden">fillerfillerfiller</h1>
+    <div class="fade-in description second-description">
+      <p>You can use Linux in many different ways. From using it as your daily driver, or using it as a server,</p>
+      <p>there are many great uses for Linux. You can use <span><a target="_blank" href="https://www.truenas.com/">TrueNAS</a></span> or <span><a target="_blank" href="https://www.proxmox.com/en/">ProxMox</a></span> to set up a cool home server.</p>
+      <p>You could also use <span><a target="_blank" href="https://debian.org">Debian</a></span> with <span><a target="_blank" href="https://hypr.land/">Hyprland</a></span>, <span><a target="_blank" href="https://archlinux.org/">Arch Linux</a></span> with <span><a target="_blank" href="https://kde.org/plasma-desktop/">KDE Plasma</a></span>, or many other combinations of personal</p>
+      <p>preferences you can put onto your system. That's the beauty of Linux, you have control over everything.</p>
+    </div>
 </body>
 <style>
 :root{
@@ -171,6 +177,11 @@ html{
 }
 
 
+.second-description{
+  animation-delay: 7s;
+}
+
+
 /* Please put all the "@keyframes" in the bottom for cleanliness*/
 @keyframes fade_in {
   0%{opacity: 0;}
@@ -183,10 +194,12 @@ html{
   100%{transform: scale(1.1) rotate(-5deg); border: 5px solid black;}
 }
 
+
 @keyframes button_anim_reverse{
   0%{transform: scale(1.1) rotate(-5deg); border: 5px solid black;}
   100%{transform: scale(1) rotate(0deg); border: 2px solid black;}
 }
+
 
 @keyframes button_click_anim {
   0%{transform: scale(1.1) rotate(-5deg);}
