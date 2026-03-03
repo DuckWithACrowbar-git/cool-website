@@ -38,7 +38,7 @@ def run_https():
 
     # Modern SSL setup
     context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-    context.load_cert_chain(certfile="cert.pem", keyfile="key.pem")
+    context.load_cert_chain(certfile="/srv/cool-website/cert.pem", keyfile="/srv/cool-website/privkey.pem")
 
     httpd.socket = context.wrap_socket(httpd.socket, server_side=True)
 
