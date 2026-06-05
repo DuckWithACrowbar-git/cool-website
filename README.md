@@ -1,2 +1,2 @@
 # cool-website
-A website dedicated to explaining Linux things :D
+idk some random shit
