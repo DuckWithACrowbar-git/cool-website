@@ -9,8 +9,8 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 @app.route("/")
 def root():
-    response = requests.get(URL+"/random").text
-    return render_template('index.html', rand_num=response)
+    # response = requests.get(URL+"/random").text
+    return render_template('index.html')
 
 @app.route("/random", methods=['GET'])
 def random():
