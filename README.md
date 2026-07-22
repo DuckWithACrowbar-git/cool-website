@@ -1,2 +1,2 @@
 # cool-website
-idk some random shit
+Random number generator
