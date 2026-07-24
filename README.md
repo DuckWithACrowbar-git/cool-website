@@ -1,2 +1,2 @@
 # cool-website
-Random number generator
+Random hexadecimal color generator
