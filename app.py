@@ -6,7 +6,6 @@ import random as r
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
 
 limiter = Limiter(
     get_remote_address,
@@ -18,21 +17,15 @@ limiter = Limiter(
 
 @app.route("/")
 def root():
-    result_color = ["#"]
-    for i in range(6):
-        for j in range(3):
-            choice = r.choice(values)
-        result_color.append(choice)
-    result_color = "".join(result_color)
-    return render_template('index.html', color=result_color), 200
+    return render_template('index.html'), 200
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return redirect("/"), 308
+    return redirect('404.html'), 200
 
 @app.errorhandler(429)
 def ratelimit_handler(e):
-    return "Rate limit exceeded. Slow down."
+    return render_template('ratelimit.html'), 200
 
 
 if __name__ == "__main__":

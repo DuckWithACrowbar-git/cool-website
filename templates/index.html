@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Random hex color generator</title>
+    <title>Old-timey radio</title>
     <meta charset="UTF-8">
     <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
     <meta http-equiv="Pragma" content="no-cache">
@@ -11,9 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div><h1>Random hex color generator</h1></div>
-    <div><h2>{{color}}</h2></div>
-    <div><button type="button" onclick="window.location.reload();">Generate new color</button></div>
+    <div class="center"><h1 class="main-title">_____</h1></div>
 </body>
 </html>
 <style>
@@ -21,21 +19,20 @@
         font-family: "Ubuntu", sans-serif;
         font-weight: 500;
         font-style: normal;
-        background-color: {{color}};
+        background-color: black;
     }
     body{
         color: white;
     }
-    div{
+    .center{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    h1{
+    .main-title{
         transform: scale(1.5);
     }
-    button{
-        margin-top: 100px;
-        transform: scale(1.3);
+    .invisible{
+        opacity: 0;
     }
 </style>
