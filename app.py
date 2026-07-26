@@ -50,8 +50,13 @@ def root():
                            expiry_date=expiry_date, 
                            severity=severity,
                            certainty=certainty,
-                           description=description,
+                           event=event,
+                           desc=description,
                            instruction=instruction), 200
+
+@app.errorhandler(429)
+def ratelimit(error):
+    return render_template('ratelimit.html'), 200
 
 if __name__ == "__main__":
     thread = t.Thread(target=get_data, daemon=True)
