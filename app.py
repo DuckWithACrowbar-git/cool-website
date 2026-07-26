@@ -10,24 +10,26 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 URL = "https://api.weather.gov/alerts/active/area/TX"
 TIME_TO_WAIT = 5 * 60
-alert_id = None
-sent_date = None
-expiry_date = None
-severity = None
-certainty = None
-description = None
-instruction = None
+alert_id = " "
+sent_date = " "
+expiry_date = " "
+severity = " "
+certainty = " "
+event = " "
+description = " "
+instruction = " "
 
 def get_data():
     while True:
         response = requests.get(URL)
         data = response.json()
-        global alert_id, sent_date, expiry_date, severity, certainty, description, instruction
+        global alert_id, sent_date, expiry_date, severity, certainty, event, description, instruction
         alert_id = (data["features"][0]["properties"]["@id"])
         sent_date = (data["features"][0]["properties"]["sent"])
         expiry_date = (data["features"][0]["properties"]["expires"])
         severity = (data["features"][0]["properties"]["severity"])
         certainty = (data["features"][0]["properties"]["certainty"])
+        event = (data["features"][0]["properties"]["event"])
         description = (data["features"][0]["properties"]["description"])
         instruction = (data["features"][0]["properties"]["instruction"])
         sleep(TIME_TO_WAIT)
