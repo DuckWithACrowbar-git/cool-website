@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 URL = "https://api.weather.gov/alerts/active/area/TX"
-TIME_TO_WAIT = 5 * 60
+TIME_TO_WAIT = 60
 alert_id = " "
 sent_date = " "
 expiry_date = " "
@@ -23,7 +23,7 @@ def get_data():
     while True:
         response = requests.get(URL)
         data = response.json()
-        global alert_id, sent_date, expiry_date, severity, certainty, event, description, instruction
+        global alert_id, sent_date, expiry_date, severity, certainty, event, description, instruction, NWSheadline
         alert_id = (data["features"][0]["properties"]["@id"])
         sent_date = (data["features"][0]["properties"]["sent"])
         expiry_date = (data["features"][0]["properties"]["expires"])
@@ -32,6 +32,7 @@ def get_data():
         event = (data["features"][0]["properties"]["event"])
         description = (data["features"][0]["properties"]["description"])
         instruction = (data["features"][0]["properties"]["instruction"])
+        NWSheadline = (data["features"][0]["properties"]["parameters"]["NWSheadline"][0])
         sleep(TIME_TO_WAIT)
 
 
@@ -52,13 +53,22 @@ def root():
                            certainty=certainty,
                            event=event,
                            desc=description,
-                           instruction=instruction), 200
+                           instruction=instruction,
+                           headline=NWSheadline), 200
+
+@app.route("/about")
+def about():
+    return render_template('about.html'), 200
 
 @app.errorhandler(429)
 def ratelimit(error):
     return render_template('ratelimit.html'), 200
 
+@app.errorhandler(404)
+def ratelimit(error):
+    return render_template('404.html'), 200
+
 if __name__ == "__main__":
     thread = t.Thread(target=get_data, daemon=True)
     thread.start()
-    app.run()
+    app.run(host="0.0.0.0")

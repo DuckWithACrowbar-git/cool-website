@@ -6,33 +6,54 @@
     <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet preload">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet preload">
 </head>
 <body>
-    <div id="1">
-        <h6 class="small-text">ID: {{alert_id   }}</h6>
+    <div class=one>
+        <h1 class="main-title center">Weather Forecast</h1>
+        <h5 class="center">Current watches, warnings, and advisories for Texas</h5>
+        <h4 class="headline center">{{headline}}</h4>
+    </div>
+    <div class="two center">
+        <img class="gov-img" loading="lazy" src="https://www.weather.gov/wwamap/png/US.png"></img>
+    </div>
+    <div class="three pad-left">
+        <h4 class="close">Current event: {{event}}</h4>
+        <h4 class="close">Severity: {{severity}}</h4>
+        <h4 class="close">Certainty: {{certainty}}</h4>
+        <h4 class="close">Instruction: <h5 class="text-wrap close2">{{instruction}}</h5></h4>
+        <h4 class="close">Description: <h5 class="text-wrap close2">{{desc}}</h5></h4>
+    </div>
+    <div class="four pad-left c-font">
+        <h6 class="small-text">ID: <a href="{{alert_id}}" target="_blank">{{alert_id}}</a></h6>
         <h6 class="small-text">Sent: {{sent_date}}</h6>
         <h6 class="small-text">Expires: {{expiry_date}}</h6>
     </div>
-    <div id=2>
-        <h1 class="main-title center">Weather Forecast</h1>
-        <h5 class="center">Current watches, warnings, and advisories for Texas</h5>
-    </div>
-    <div id="3">
-        <h4>Current event: {{event}}</h4>
-        <h4>Severity: {{severity}}</h4>
-        <h4>Certainty: {{certainty}}</h4>
-        <h4>Instruction: <h6>{{instruction}}</h6></h4>
-        <h4>Description: <h6>{{desc}}</h6></h4>
+    <hr></hr>
+    <div class="five c-font">
+        <a class="footer" href="/about">About</a>
+        <a class="footer" href="mailto:husseingbox@gmail.com">Contact Me</a>
     </div>
 </body>
 <style>
     html{
+        opacity: 0;
         font-family: "Ubuntu", sans-serif;
         font-weight: 500;
         font-style: normal;
         background-color: black;
         color: white;
+        animation-name: fade-in;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+        animation-delay: 0.5s;
+
+    }
+    hr{
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     .invisible{
         opacity: 0;
@@ -42,11 +63,64 @@
         justify-content: center;
         align-items: center;
     }
+    .headline{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     .main-title{
-        padding-top: 50px;
+        padding-top: 10px;
+    }
+    .c-font{
+        font-family: "Courier Prime", monospace;
+        font-weight: 700;
+        font-style: normal;
     }
     .small-text{
         margin-top: 0px;
         margin-bottom: 0px;
     }
+    .gov-img{
+        width: 500px;
+        height: 350px;
+        border: 5px solid black;
+        border-radius: 20px;
+        margin: 20px; 
+    }
+    .text-wrap{
+        max-width: 90%;
+    }
+    .close{
+        margin: 0;
+    }
+    .close2{
+        margin: 7px;
+    }
+    .pad-left{
+        padding-left: 70px;
+    }
+    .three{
+        padding-top: 10px;
+    }
+    .four{
+        padding-top: 30px;
+    }
+    .five{
+        display: flex;
+        padding-left: 30px;
+    }
+    .footer{
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-decoration: none;
+    }
+
+    /* Put keyframes stuff under here */
+    @keyframes fade-in {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
 </style>
+<script>
+    window.scrollTo(0, 0);
+</script>
